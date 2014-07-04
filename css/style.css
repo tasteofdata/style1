@@ -2349,6 +2349,7 @@ li {
 .post_blog img {
 	float:left;
 	margin:20px 0px;
+	max-width:300px;_width:expression(this.width > 300 ? "300px" : this.width); 
 }
 .post_blog p {
 	float:left;
