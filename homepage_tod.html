@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -16,6 +16,10 @@
 <script src="js/basic-jquery-slider.js"  type="text/javascript" language="javascript"></script>
 <script type="text/javascript" src="js/custom.js" language="javascript"></script>
 <script type="text/javascript" src="js/input.js" language="javascript"></script>
+<script type="text/javascript" src="js/arbor.js"></script>
+<script type="text/javascript" src="js/renderer.js"></script>
+<script type="text/javascript" src="js/arbor-graphics.js"></script>
+<script type="text/javascript" src="js/drawPopo.js"></script>
 
 <!--  Attach the plug-in to the slider parent element and adjust the settings as required -->
 <script  type="text/javascript" language="javascript">
@@ -37,7 +41,7 @@ ul.bjqs h1, ol.bjqs-markers li a {
 </style>
 </head>
 
-<body>
+<body onload="drawPopo('json/popoInfo.json')">
 <!--Header Start Here-->
 <div id="header">
   <div id="top_header">
@@ -50,10 +54,15 @@ ul.bjqs h1, ol.bjqs-markers li a {
   <!--Top Header End Here-->
   <div id="logo_nav">
     <div class="bg1">
+    	<div class="wrapper col3" style="position:absolute;z-index:2">
+         <center>
+	           <canvas id="popo" width="1400" height="550" ></canvas>
+         </center>
+      </div>
       <div class="center_frame"> 
         <!--Logo And Navigation Start Here-->
         <div class="logo"> <a href="index.html"><img src="images/logo.png" alt=""  /></a> </div>
-        <ul id="navigation">
+        <ul id="navigation" style="z-index:1">
           <li><a href="index.html"><span>首页</span></a></li>
           <li><a href="about.html"><span>趣味数据</span></a></li>
           <li><a href="#"><span>数据应用</span></a>
